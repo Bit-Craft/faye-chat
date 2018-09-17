@@ -1,0 +1,11 @@
+{
+	"name": "faye-chat-server",
+	"description": "Faye Chat Server",
+	"author": "Jostein Thorsen",
+	"version": "0.1.0",
+	"dependencies": {
+		"express": "^4.16.3",
+		"faye": "^1.2.4"
+	},
+	"private": true
+}

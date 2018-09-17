@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+@import "../import/reset";
+@import "../import/colors";
+
+body {
+	font-family: Lato;
+	background-color: @bw10;
+}
+
+.clientContainer {
+	display: flex;
+	flex-direction: row;
+	&__column {
+		&:nth-child(1) { flex: 1; }
+		&:nth-child(2) { flex: 2; }
+	}
+}
+
+.userList {
+	margin: 50px auto 0 auto;
+	border: 1px solid @bw0;
+	width: 300px;
+	height: 500px;
+	overflow-y: scroll;
+	background-color: @bw20;
+	&__title {
+		font-size: 22px;
+		border-bottom: 1px solid @bw0;
+		padding: 10px;
+		color: @bw60;
+	}
+	&__user {
+		box-shadow: 0 0 0 1px @bw0;
+		display: flex;
+		flex-direction: row;
+		font-size: 16px;
+		&--color0 { color: @yellow; }
+		&--color1 { color: @blue; }
+		&--color2 { color: @green; }
+		&--color3 { color: @orange; }
+		&--color4 { color: @red; }
+		&--color5 { color: @purple; }
+		&__name {
+			width: 200px;
+			padding: 10px;
+			word-wrap: break-word;
+		}
+		&__muteButton {
+			box-shadow: 0 0 0 1px @bw0;
+			background-color: @bw30;
+			color: @bw80;
+			width: 78px;
+			font-weight: 700;
+			padding: 10px;
+			cursor: pointer;
+			transition: all 0.4s;
+			&:hover {
+				background-color: @bw20;
+			}
+		}
+	}
+}
+
+.messageContainer {
+	margin: 50px auto 0 auto;
+	width: 500px;
+	height: 500px;
+	overflow-y: scroll;
+	border: 1px solid @bw0;
+	background-color: @bw20;
+}
+
+.message {
+	display: flex;
+	flex-direction: row;
+	&--color0 { color: @yellow; }
+	&--color1 { color: @blue; }
+	&--color2 { color: @green; }
+	&--color3 { color: @orange; }
+	&--color4 { color: @red; }
+	&--color5 { color: @purple; }
+	&__name {
+		font-weight: 700;
+		width: 140px;
+		padding: 10px;
+		background-color: @bw15;
+		box-shadow: 0 0 0 1px @bw0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	&__text {
+		font-weight: 300;
+		width: 320px;
+		padding: 10px;
+		box-shadow: 0 0 0 1px @bw0;
+		word-wrap: break-word;
+	}
+}
+
+.addMessageForm {
+	margin: 0 auto;
+	width: 500px;
+	height: 100px;
+	box-shadow: 0 0 0 1px @bw0;
+	background-color: @bw20;
+	&__row {
+		height: 50px;
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		&__label {
+			min-width: 60px;
+			max-width: 60px;
+			text-align: right;
+			padding: 18px;
+			font-size: 14px;
+			color: @bw70;
+		}
+		&__nameInput {
+			height: 30px;
+			width: 390px;
+			padding: 10px;
+			box-shadow: 0 0 0 1px @bw0;
+			background-color: @bw20;
+			color: @bw70;
+			cursor: text;
+		}
+		&__messageInput {
+			height: 30px;
+			width: 320px;
+			padding: 10px;
+			box-shadow: 0 0 0 1px @bw0;
+			background-color: @bw30;
+			color: @bw90;
+			cursor: text;
+		}
+		&__button {
+			box-shadow: 0 0 0 1px @bw0;
+			background-color: @bw15;
+			color: @bw90;
+			cursor: pointer;
+			transition: all 0.4s;
+			&:hover {
+				background-color: @bw0;
+			}
+		}
+	}
+}
